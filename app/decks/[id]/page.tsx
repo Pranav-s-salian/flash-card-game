@@ -1,4 +1,5 @@
 import { DeckView } from "@/components/deck-view";
+import type { PageProps } from "next";
 
 export function generateStaticParams() {
   return [
@@ -10,6 +11,6 @@ export function generateStaticParams() {
   ];
 }
 
-export default function DeckPage({ params }: { params: { id: string } }) {
+export default function DeckPage({ params }: PageProps) {
   return <DeckView deckId={params.id} />;
 }
