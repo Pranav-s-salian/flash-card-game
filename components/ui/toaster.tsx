@@ -10,19 +10,27 @@ import {
   ToastViewport,
 } from '@/components/ui/toast';
 
+type ToastItem = {
+  id: string;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  action?: React.ReactNode;
+  [key: string]: any;
+};
+
 export function Toaster() {
   const { toasts } = useToast();
 
   return (
     <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, ...props }) {
+      {toasts.map((toast: ToastItem) => {
+        // Exclude title, description, action from spread
+        const { id, title, description, action, ...toastProps } = toast;
         return (
-          <Toast key={id} {...props}>
+          <Toast key={id} {...toastProps}>
             <div className="grid gap-1">
               {title && <ToastTitle>{title}</ToastTitle>}
-              {description && (
-                <ToastDescription>{description}</ToastDescription>
-              )}
+              {description && <ToastDescription>{description}</ToastDescription>}
             </div>
             {action}
             <ToastClose />
