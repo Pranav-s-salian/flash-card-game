@@ -314,7 +314,7 @@ export function Flashcard({
               )}
             >
               <X className="w-4 h-4 text-red-500" />
-              <span className="font-medium">Don't Know</span>
+              <span className="font-medium">Don&apos;t Know</span>
             </Button>
           </motion.div>
           

@@ -290,7 +290,7 @@ export function DeckView({ deckId }: { deckId: string }) {
               </div>
               <h2 className="text-xl font-medium mb-2">All caught up!</h2>
               <p className="text-muted-foreground max-w-md mb-6">
-                You've reviewed all cards for today. Come back tomorrow for more!
+                You&apos;ve reviewed all cards for today. Come back tomorrow for more!
               </p>
               <div className="flex gap-4">
                 <Button variant="outline" onClick={() => setIsAddingCard(true)}>

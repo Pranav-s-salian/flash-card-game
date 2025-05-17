@@ -90,7 +90,7 @@ export function DeckCard({ deck, onDelete, onEdit }: DeckCardProps) {
                 <AlertDialogHeader>
                   <AlertDialogTitle>Delete deck</AlertDialogTitle>
                   <AlertDialogDescription>
-                    Are you sure you want to delete "{deck.name}"? This action cannot be undone.
+                    Are you sure you want to delete &quot;{deck.name}&quot;? This action cannot be undone.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
